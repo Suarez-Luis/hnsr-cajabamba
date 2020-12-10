@@ -97,8 +97,8 @@ class ControladorAtenciones{
 
 					
 					/*=============================================
-		=            VALIDAR IMAGEN ATENCIONL        =
-		=============================================*/
+					=   VALIDAR IMAGEN ATENCIONL        =
+					=============================================*/
 
 					$ruta = "vistas/img/atenciones/doc/doc2.jpg";
 
@@ -150,11 +150,183 @@ class ControladorAtenciones{
 							imagepng($destino, $ruta);
 
 						}
+						
+					}
+
+
+					/*=============================================
+					=   VALIDAR IMAGEN ATENCION 2        =
+					=============================================*/
+
+					$ruta2 = "vistas/img/atenciones/doc/doc2.jpg";
+
+					if (isset($_FILES["fotoDiagnostico2"]["tmp_name"])){
+
+						list($ancho, $alto) = getimagesize($_FILES["fotoDiagnostico2"]["tmp_name"]);
+
+						$nuevoAncho = 791;
+						$nuevoAlto = 1024;
+
+						/*=============================================
+						=  CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO =
+						=============================================*/
+
+						$directorio = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"];
+
+						mkdir($directorio, 0755);
+
+						/*=============================================
+						=  DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP =
+						=============================================*/
+
+						if ($_FILES["fotoDiagnostico2"]["type"] == "image/jpeg"){
+
+							/*=============================================
+							=  GUARDAMOS LA IMAGEN EN EL DIRECTORIO =
+							=============================================*/
+
+							$aleatorio = mt_rand(100,999);
+							$ruta = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+							$origen = imagecreatefromjpeg($_FILES["fotoDiagnostico2"]["tmp_name"]);
+							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+							imagejpeg($destino, $ruta);
+
+						}
+
+						if ($_FILES["fotoDiagnostico2"]["type"] == "image/png"){
+
+							/*=============================================
+							=  GUARDAMOS LA IMAGEN EN EL DIRECTORIO =
+							=============================================*/
+
+							$aleatorio = mt_rand(100,999);
+							$ruta = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+							$origen = imagecreatefrompng($_FILES["fotoDiagnostico2"]["tmp_name"]);
+							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+							imagepng($destino, $ruta);
+
+						}
 
 
 
 
 						
+					}
+
+
+					/*=============================================
+					=   VALIDAR IMAGEN ATENCION 3        =
+					=============================================*/
+
+					$ruta3 = "vistas/img/atenciones/doc/doc2.jpg";
+
+					if (isset($_FILES["fotoDiagnostico3"]["tmp_name"])){
+
+						list($ancho, $alto) = getimagesize($_FILES["fotoDiagnostico3"]["tmp_name"]);
+
+						$nuevoAncho = 791;
+						$nuevoAlto = 1024;
+
+						/*=============================================
+						=  CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO =
+						=============================================*/
+
+						$directorio = "vistas/img/atenciones/i3/".$_POST["nuevoCodigo"];
+
+						mkdir($directorio, 0755);
+
+						/*=============================================
+						=  DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP =
+						=============================================*/
+
+						if ($_FILES["fotoDiagnostico3"]["type"] == "image/jpeg"){
+
+							/*=============================================
+							=  GUARDAMOS LA IMAGEN EN EL DIRECTORIO =
+							=============================================*/
+
+							$aleatorio = mt_rand(100,999);
+							$ruta = "vistas/img/atenciones/i3/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+							$origen = imagecreatefromjpeg($_FILES["fotoDiagnostico3"]["tmp_name"]);
+							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+							imagejpeg($destino, $ruta);
+
+						}
+
+						if ($_FILES["fotoDiagnostico3"]["type"] == "image/png"){
+
+							/*=============================================
+							=  GUARDAMOS LA IMAGEN EN EL DIRECTORIO =
+							=============================================*/
+
+							$aleatorio = mt_rand(100,999);
+							$ruta = "vistas/img/atenciones/i3/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+							$origen = imagecreatefrompng($_FILES["fotoDiagnostico3"]["tmp_name"]);
+							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+							imagepng($destino, $ruta);
+
+						}	
+					}
+
+
+					/*=============================================
+					=   VALIDAR IMAGEN ATENCION 4        =
+					=============================================*/
+
+					$ruta4 = "vistas/img/atenciones/doc/doc2.jpg";
+
+					if (isset($_FILES["fotoDiagnostico4"]["tmp_name"])){
+
+						list($ancho, $alto) = getimagesize($_FILES["fotoDiagnostico4"]["tmp_name"]);
+
+						$nuevoAncho = 791;
+						$nuevoAlto = 1024;
+
+						/*=============================================
+						=  CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO =
+						=============================================*/
+
+						$directorio = "vistas/img/atenciones/i4/".$_POST["nuevoCodigo"];
+
+						mkdir($directorio, 0755);
+
+						/*=============================================
+						=  DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP =
+						=============================================*/
+
+						if ($_FILES["fotoDiagnostico4"]["type"] == "image/jpeg"){
+
+							/*=============================================
+							=  GUARDAMOS LA IMAGEN EN EL DIRECTORIO =
+							=============================================*/
+
+							$aleatorio = mt_rand(100,999);
+							$ruta = "vistas/img/atenciones/i4/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+							$origen = imagecreatefromjpeg($_FILES["fotoDiagnostico4"]["tmp_name"]);
+							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+							imagejpeg($destino, $ruta);
+
+						}
+
+						if ($_FILES["fotoDiagnostico4"]["type"] == "image/png"){
+
+							/*=============================================
+							=  GUARDAMOS LA IMAGEN EN EL DIRECTORIO =
+							=============================================*/
+
+							$aleatorio = mt_rand(100,999);
+							$ruta = "vistas/img/atenciones/i4/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+							$origen = imagecreatefrompng($_FILES["fotoDiagnostico4"]["tmp_name"]);
+							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+							imagepng($destino, $ruta);
+
+						}	
 					}
 
 
@@ -169,6 +341,9 @@ class ControladorAtenciones{
 									   "especialidad"  => $_POST["nuevaEspecialidad"],
 									   "diagnostico"  => $_POST["nuevoDiagnostico"],
 									   "imagen_diagnostico"  => $ruta,
+									   "imagen_diagnostico2"  => $ruta2,
+									   "imagen_diagnostico3"  => $ruta3,
+									   "imagen_diagnostico4"  => $ruta4,
 									   "fecha_atencion"  => $_POST["nuevaFechaAtencion"]);
 
 						$respuesta = ModeloAtenciones::mdlIngresarAtenciones($tabla, $datos);

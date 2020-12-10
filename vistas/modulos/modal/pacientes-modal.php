@@ -141,7 +141,7 @@
               <div class="form-group col-sm-12 col-xs-12">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                  <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar #Telefono" required>
+                  <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar #Telefono">
                 </div>
               </div>
 

@@ -45,7 +45,7 @@ require_once "conexion.php";
 
 		static public function mdlIngresarAtenciones($tabla, $datos){
 
-			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo_atencion, id_usuario, id_personal_salud, id_paciente, ups, servicio, especialidad, diagnostico, imagen_diagnostico, fecha_atencion) VALUES (:codigo_atencion, :id_usuario, :id_personal_salud, :id_paciente, :ups, :servicio, :especialidad, :diagnostico, :imagen_diagnostico, :fecha_atencion)");
+			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo_atencion, id_usuario, id_personal_salud, id_paciente, ups, servicio, especialidad, diagnostico, imagen_diagnostico, imagen_diagnostico2, imagen_diagnostico3, imagen_diagnostico4, fecha_atencion) VALUES (:codigo_atencion, :id_usuario, :id_personal_salud, :id_paciente, :ups, :servicio, :especialidad, :diagnostico, :imagen_diagnostico, :imagen_diagnostico2, :imagen_diagnostico3, :imagen_diagnostico4, :fecha_atencion)");
 
 			$stmt->bindParam(":codigo_atencion", $datos["codigo_atencion"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_STR);
@@ -56,6 +56,9 @@ require_once "conexion.php";
 			$stmt->bindParam(":especialidad", $datos["especialidad"], PDO::PARAM_STR);
 			$stmt->bindParam(":diagnostico", $datos["diagnostico"], PDO::PARAM_STR);
 			$stmt->bindParam(":imagen_diagnostico", $datos["imagen_diagnostico"], PDO::PARAM_STR);
+			$stmt->bindParam(":imagen_diagnostico2", $datos["imagen_diagnostico2"], PDO::PARAM_STR);
+			$stmt->bindParam(":imagen_diagnostico3", $datos["imagen_diagnostico3"], PDO::PARAM_STR);
+			$stmt->bindParam(":imagen_diagnostico4", $datos["imagen_diagnostico4"], PDO::PARAM_STR);
 			$stmt->bindParam(":fecha_atencion", $datos["fecha_atencion"], PDO::PARAM_STR);
 
 			if ($stmt->execute()) {

@@ -82,7 +82,7 @@ if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] =="Especial" |
 
           echo '<li>
             <a href="emergencia">
-              <i class="fa fa-sitemap"></i>
+              <i class="fa fa-plus-circle"></i>
               <span>&nbsp;&nbsp;Emergencia</span>
             </a>
             </li>';

@@ -104,7 +104,7 @@
               <div class="form-group col-sm-12 col-xs-12">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                  <input type="text" class="form-control input-lg" name="nuevaEspecialidad" placeholder="Ingrese Especialidad" required>
+                  <input type="text" class="form-control input-lg" name="nuevaEspecialidad" placeholder="Ingrese Especialidad">
                 </div>
               </div>
 

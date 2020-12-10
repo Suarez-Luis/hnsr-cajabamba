@@ -197,7 +197,7 @@
   <div class="row">
 
     <!--=====================================
-    =     FORMULARIOS HISTORIA CLINICA        =
+    =     FORMULARIOS EMERGENCIA       =
     ======================================-->
     
     <div class="col-lg-5 col-xs-12">
@@ -205,13 +205,13 @@
 
          <div class="box-header with-border">
                 <i class="fa fa-text-width"></i>
-                <h3 class="box-title"><kbd> 4. Crear Historia Clinica</kbd></h3>
+                <h3 class="box-title"><kbd> 3. Crear Nuevo Registro Emergencia</kbd></h3>
             </div>
 
         <div class="box-header with-border"></div>
           
           
-          <form role="form" method="post" class="formularioHistoriaClinica">
+          <form role="form" method="post" class="formularioEmergencia">
             <!--====  Body  ====-->
             <div class="box-body">
               <div class="box">
@@ -259,18 +259,18 @@
                 </div>
 
                 <!--=====================================
-                =   ENTRADA AGREGAR TIPO HISTORIA CLINICA       =
+                =   ENTRADA TURNO      =
                 ======================================-->
 
                 <div class="form-group">
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-                    <select class="form-control" id="selecionarUps" name="selecionarUps" required>
-                      <option value="">Selecionar Tipo Historia Clinica</option>
-                      <option value="Activo">ACTIVO</option>
-                      <option value="Pasivo">PASIVO</option>
-                      <option value="Archivo General">ARCHIVO GENERAL</option>
+                    <select class="form-control" id="selecionarTurno" name="selecionarTurno" required>
+                      <option value="">Selecionar Turno</option>
+                      <option value="Mañana">Mañana: 7:00 am a 13:00 pm</option>
+                      <option value="Tarde">Tarde: 13:00 pm a 19:00 pm</option>
+                      <option value="Noche">Noche: 19:00 pm a 7:00 am</option>
                     </select>
                     
                   </div>
@@ -278,24 +278,122 @@
 
            
                 <!--=====================================
-                =   ENTRADA AGREGAR ATENCIONES        =
+                =   ENTRADA SERVICIO      =
                 ======================================-->
 
-                <div class="form-group row nuevaAtencion" style="width: 100%">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-
+                    <select class="form-control" id="selecionarServicio" name="selecionarServicio" required>
+                      <option value="">Selecionar Servicio</option>
+                      <option value="Cirugia General">CIRUGIA GENERAL</option>
+                      <option value="Medicina Adultos">MEDICINA ADULTOS</option>
+                      <option value="Pediatria">PEDIATRIA</option>
+                      <option value="Obstetricia">OBSTETRICIA</option>
+                    </select>
+                    
+                  </div>
                 </div>
 
-                <input type="hidden" id="listaAtenciones" name="listaAtenciones">
+                <!-- ENTRADA DEL LIC. ENFERMERIA / OBSTETRA -->
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                    <select class="form-control input-lg" name="nuevaPersonalSalud" id="buscarPersonalSalud" style="width: 100%">
+                      <option value="">Seleccionar Enfermero(a) / Obstetra</option>
+                      <?php
 
-                <!--=====================================
-                =   BOTON AGREGAR ATENCION PARA DISPOSITIVOS MOVIL - TABLET       =
+                      $item = null;
+                      $valor = null;
+
+                      $personalSalud = ControladorPersonalSalud::ctrMostrarPersonalSalud($item, $valor);
+
+                      foreach ($personalSalud as $key => $value) {
+                        echo '<option value="'.$value["id_personal_salud"].'">'.$value["profesion"]." ".$value["apellido"]." ".$value["nombre"].'</option>';
+                      } 
+
+
+                      ?>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- ENTRADA DEL TECNICOS -->
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                    <select class="form-control input-lg" name="nuevaPersonalSalud" id="buscarPersonalSalud" style="width: 100%">
+                      <option value="">Seleccionar Tecnica(o)</option>
+                      <?php
+
+                      $item = null;
+                      $valor = null;
+
+                      $personalSalud = ControladorPersonalSalud::ctrMostrarPersonalSalud($item, $valor);
+
+                      foreach ($personalSalud as $key => $value) {
+                        echo '<option value="'.$value["id_personal_salud"].'">'.$value["profesion"]." ".$value["apellido"]." ".$value["nombre"].'</option>';
+                      } 
+
+
+                      ?>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- ENTRADA DE CAMA -->
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-address-card"></i></span>
+                  <input type="number" class="form-control input-lg" name="nuevaCama" placeholder="Ingresar Nùmero de Cama" required>
+                </div>
+              </div>
+
+              <!-- ENTRADA DE FECHA DE INGRESO -->
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                  <input type="date" class="form-control input-lg" name="nuevaFechaIngreso" placeholder="Ingresar Fecha de ingreso" >
+                </div>
+              </div>
+
+              <!-- ENTRADA DEL DIAGNOSTICO -->
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-users"></i></span>
+
+                  <textarea class="form-control" id="nuevoDiagnostico" name="nuevoDiagnostico" rows="3" placeholder="Describe diagnostico (CIEX), ..."></textarea>
+                        
+                </div>
+              </div>
+
+              <!-- ENTRADA DE FECHA DE EGRESO -->
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                  <input type="date" class="form-control input-lg" name="nuevaFechaEgreso" placeholder="Ingresar Fecha de Egreso" >
+                </div>
+              </div>
+
+              <!--=====================================
+                =   ENTRADA DESTINO    =
                 ======================================-->
 
-                <button type="button" class="btn btn-default hidden-lg hidden-md hidden-sm hidden-xs btnAgregarAtencion">Agregar Atención</button>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-                <hr>
-
+                    <select class="form-control" id="selecionarDestino" name="selecionarDestino" required>
+                      <option value="">Selecionar Destino</option>
+                      <option value="Alta Medica">ALTA MEDICA</option>
+                      <option value="Medicina Adultos">ALTA VOLUNTARIA</option>
+                      <option value="Pediatria">PEDIATRIA</option>
+                      <option value="Obstetricia">OBSTETRICIA</option>
+                    </select>
+                    
+                  </div>
+                </div>
 
                
 
@@ -340,38 +438,11 @@
             </div>
 
 
-        <br>
-
-         <button class="btn btn btn-primary center-block" data-toggle="modal" data-target="#modalAgregarAtenciones">Agregar Atención
-         </button>
-
-
         <div class="box-header with-border"></div>
-
-        <div class="box-body">
-
-          <table class="table table-bordered table-striped dt-responsive tablaAtencionesHistorias table-responsive small" width="100%">
-
-            <thead>
-              <tr>
-                <th style="width: 10px">#</th>
-                <th>Fecha de Atención</th>
-                <th>Personal de Salud</th>
-                <th>Paciente</th>
-                <th>Servicio</th>
-                <th>Diagnostico</th>
-                <th>IMG DIAG</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-
+          <div class="box-body">
             
-
-          </table>
-          
+          </div>
         </div>
-        
-      </div>
     </div>
 
   
@@ -388,6 +459,9 @@
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+
+
 
 
 

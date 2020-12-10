@@ -299,7 +299,7 @@ $(".tablaAtenciones").DataTable({
 
 
 /*=============================================
-=      SUBIENDO LA FOTO DE ATENCIÓN         =
+=      SUBIENDO LA FOTO DE ATENCIÓN  1        =
 =============================================*/
 $(".fotoDiagnostico").change(function() {
 
@@ -328,6 +328,120 @@ $(".fotoDiagnostico").change(function() {
 
         swal({
             title: "Error al subir la imagen",
+            text: "¡La imagen no debe de pesar màs de 5MB!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+
+
+    } else {
+
+        var datosImagen = new FileReader;
+        datosImagen.readAsDataURL(imagen);
+
+
+        $(datosImagen).on("load", function(event) {
+
+            var rutaImagen = event.target.result;
+            $(".previsualizar").attr("src", rutaImagen);
+        })
+
+
+
+
+    }
+
+})
+
+
+/*=============================================
+=      SUBIENDO LA FOTO DE ATENCIÓN  2        =
+=============================================*/
+$(".fotoDiagnostico2").change(function() {
+
+    var imagen = this.files[0];
+
+    /*=============================================
+    =      SUBIENDO LA FOTO DE LA ATENCION           =
+    =============================================*/
+
+
+    if (imagen["type"] != "image/jpeg" && imagen["type"] != "image/png") {
+
+        $(".fotoDiagnostico2").val("");
+
+        swal({
+            title: "Error al subir la imagen 2",
+            text: "¡La imagen o archivo debe estar en formato JPG, PNG o PDF!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+    } else if (imagen["size"] > 5000000) {
+
+
+        $(".fotoDiagnostico2").val("");
+
+        swal({
+            title: "Error al subir la imagen 2",
+            text: "¡La imagen no debe de pesar màs de 5MB!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+
+
+    } else {
+
+        var datosImagen = new FileReader;
+        datosImagen.readAsDataURL(imagen);
+
+
+        $(datosImagen).on("load", function(event) {
+
+            var rutaImagen = event.target.result;
+            $(".previsualizar").attr("src", rutaImagen);
+        })
+
+
+
+
+    }
+
+})
+
+
+/*=============================================
+=      SUBIENDO LA FOTO DE ATENCIÓN  3        =
+=============================================*/
+$(".fotoDiagnostico3").change(function() {
+
+    var imagen = this.files[0];
+
+    /*=============================================
+    =      SUBIENDO LA FOTO DE LA ATENCION           =
+    =============================================*/
+
+
+    if (imagen["type"] != "image/jpeg" && imagen["type"] != "image/png") {
+
+        $(".fotoDiagnostico3").val("");
+
+        swal({
+            title: "Error al subir la imagen 3",
+            text: "¡La imagen o archivo debe estar en formato JPG, PNG o PDF!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+    } else if (imagen["size"] > 5000000) {
+
+
+        $(".fotoDiagnostico3").val("");
+
+        swal({
+            title: "Error al subir la imagen 3",
             text: "¡La imagen no debe de pesar màs de 5MB!",
             type: "error",
             confirmButtonText: "¡Cerrar!"

@@ -120,12 +120,16 @@
                   <span class="input-group-addon"><i class="fa fa-users"></i></span>
                   <select class="form-control input-lg" name="nuevoServicio" id="buscarServicio" style="width: 100%">
                     <option value="">Seleccionar Servicio</option>
-                    <option value="Medicina">MEDICINA</option>
-                    <option value="Pediatria">PEDIATRIA</option>
-                    <option value="Ginecologia">GINECOLOGÍA</option>
-                    <option value="Cirugia">CIRUGÍA</option>
-                    <option value="Odontologia General">ODONTOLOGÍA GENERAL</option>
-                    <option value="Psicologia">PSICOLOGÍA</option>
+                    <option value="Medicina Interna">MEDICINA INTERNA</option>
+                    <option value="Medicina General">MEDICINA GENERAL</option>
+                    <option value="Gastroenterologia">GASTROENTEROLOGIA</option>
+                    <option value="Pediatria">PEDIATRIA GENERAL</option>
+                    <option value="Ginecologia">GINECOLOGIA</option>
+                    <option value="Cirugia General">CIRUGIA GENERAL</option>
+                    <option value="Odontologia General">ODONTOLOGIA GENERAL</option>
+                    <option value="Psicologia">PSICOLOGIA</option>
+                    <option value="Cred">CRECIMIENTO Y DESARROLLO (CRED)</option>
+                    <option value="Obstetricia">OBSTETRICIA (MATERNO, PLANIFICACIÓN FAMILIAR, ETS-VIH)</option>
                   </select>
                 </div>
               </div>
@@ -267,16 +271,39 @@
               <div class="form-group col-sm-2 col-xs-0">
               </div>
 
-              <!-- ENTRADA PARA SUBIR FOTO -->    
-              <div class="form-group col-sm-8 col-xs-12">
+              <!-- ENTRADA PARA SUBIR FOTO 1 -->    
+              <div class="form-group col-sm-3 col-xl-3">
                 <div class="panel"></div>
                 <input type="file" class="fotoDiagnostico" name="fotoDiagnostico">
-                <p class="help-block">Peso máximo de la foto 50 MB</p>
-                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="500px">
+                <p class="help-block">Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="100px">
               </div>
 
-              <div class="form-group col-sm-2 col-xs-0">
+              <!-- ENTRADA PARA SUBIR FOTO 2 -->    
+              <div class="form-group col-sm-3 col-xl-3">
+                <div class="panel"></div>
+                <input type="file" class="fotoDiagnostico2" name="fotoDiagnostico2">
+                <p class="help-block">Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="100px">
               </div>
+
+              <!-- ENTRADA PARA SUBIR FOTO 3 -->    
+              <div class="form-group col-sm-3 col-xl-3">
+                <div class="panel"></div>
+                <input type="file" class="fotoDiagnostico3" name="fotoDiagnostico3">
+                <p class="help-block">Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="100px">
+              </div>
+
+              <!-- ENTRADA PARA SUBIR FOTO 4 -->    
+              <div class="form-group col-sm-3 col-xl-3">
+                <div class="panel"></div>
+                <input type="file" class="fotoDiagnostico4" name="fotoDiagnostico4">
+                <p class="help-block">Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="100px">
+              </div>
+
+              
 
      </div> 
   </div>

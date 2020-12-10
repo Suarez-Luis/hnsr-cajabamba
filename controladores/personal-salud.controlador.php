@@ -9,8 +9,7 @@ class ControladorPersonalSalud{
 		static public function ctrCrearPersonalSalud(){
 			if (isset($_POST["nuevoNombrePS"])){
 				if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoNombrePS"]) &&
-					preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoApellidoPS"]) &&
-					preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaEspecialidad"])){
+					preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoApellidoPS"])){
 
 
 					$tabla = "personal_salud";
@@ -80,8 +79,7 @@ class ControladorPersonalSalud{
 		static public function ctrCrearPersonalSaludCPANEL(){
 			if (isset($_POST["nuevoNombrePS"])){
 				if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoNombrePS"]) &&
-					preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoApellidoPS"]) &&
-					preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaEspecialidad"])){
+					preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoApellidoPS"])){
 
 
 					$tabla = "personal_salud";
