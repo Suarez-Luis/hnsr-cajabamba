@@ -286,6 +286,9 @@ $orden = null;
 $respuestaAtencion = ControladorAtenciones::ctrMostrarAtenciones($itemAtencion, $valorAtencion, $orden);
 
 $img = $respuestaAtencion["imagen_diagnostico"];
+$img2 = $respuestaAtencion["imagen_diagnostico2"];
+$img3 = $respuestaAtencion["imagen_diagnostico3"];
+$img4 = $respuestaAtencion["imagen_diagnostico4"];
 
 $itemPersonalSalud = "id_personal_salud";
 $valorPersonalSalud = $respuestaAtencion["id_personal_salud"];
@@ -348,6 +351,9 @@ $bloque4 = <<<EOF
 		<tr>
 			<td style="border: 1px solid #666; color:#333; background-color:white; width:640px; text-align:center">
 			<img style="width:600; height:600px;" src="../../../$img">
+			<img style="width:600; height:600px;" src="../../../$img2">
+			<img style="width:600; height:600px;" src="../../../$img3">
+			<img style="width:600; height:600px;" src="../../../$img4">
 
 			
 			</td>
