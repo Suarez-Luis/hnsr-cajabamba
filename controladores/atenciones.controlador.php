@@ -100,7 +100,8 @@ class ControladorAtenciones{
 					=   VALIDAR IMAGEN ATENCIONL        =
 					=============================================*/
 
-					$ruta = "vistas/img/atenciones/doc/doc2.jpg";
+					$ruta = "";
+					
 
 					if (isset($_FILES["fotoDiagnostico"]["tmp_name"])){
 
@@ -158,11 +159,12 @@ class ControladorAtenciones{
 					=   VALIDAR IMAGEN ATENCION 2        =
 					=============================================*/
 
-					$ruta2 = "vistas/img/atenciones/doc/doc2.jpg";
+					$ruta2 = "";
 
 					if (isset($_FILES["fotoDiagnostico2"]["tmp_name"])){
 
-						list($ancho, $alto) = getimagesize($_FILES["fotoDiagnostico2"]["tmp_name"]);
+						list($ancho2, $alto2) = getimagesize($_FILES["fotoDiagnostico2"]["tmp_name"]);
+						
 
 						$nuevoAncho = 791;
 						$nuevoAlto = 1024;
@@ -171,9 +173,9 @@ class ControladorAtenciones{
 						=  CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO =
 						=============================================*/
 
-						$directorio = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"];
+						$directorio2 = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"];
 
-						mkdir($directorio, 0755);
+						mkdir($directorio2, 0755);
 
 						/*=============================================
 						=  DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP =
@@ -186,11 +188,11 @@ class ControladorAtenciones{
 							=============================================*/
 
 							$aleatorio = mt_rand(100,999);
-							$ruta = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+							$ruta2 = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
 							$origen = imagecreatefromjpeg($_FILES["fotoDiagnostico2"]["tmp_name"]);
 							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
-							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-							imagejpeg($destino, $ruta);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho2, $alto2);
+							imagejpeg($destino, $ruta2);
 
 						}
 
@@ -201,11 +203,11 @@ class ControladorAtenciones{
 							=============================================*/
 
 							$aleatorio = mt_rand(100,999);
-							$ruta = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+							$ruta2 = "vistas/img/atenciones/i2/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
 							$origen = imagecreatefrompng($_FILES["fotoDiagnostico2"]["tmp_name"]);
 							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
-							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-							imagepng($destino, $ruta);
+							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho2, $alto2);
+							imagepng($destino, $ruta2);
 
 						}
 
@@ -220,11 +222,12 @@ class ControladorAtenciones{
 					=   VALIDAR IMAGEN ATENCION 3        =
 					=============================================*/
 
-					$ruta3 = "vistas/img/atenciones/doc/doc2.jpg";
+					$ruta3 = "";
 
 					if (isset($_FILES["fotoDiagnostico3"]["tmp_name"])){
 
 						list($ancho, $alto) = getimagesize($_FILES["fotoDiagnostico3"]["tmp_name"]);
+						
 
 						$nuevoAncho = 791;
 						$nuevoAlto = 1024;
@@ -248,11 +251,11 @@ class ControladorAtenciones{
 							=============================================*/
 
 							$aleatorio = mt_rand(100,999);
-							$ruta = "vistas/img/atenciones/i3/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+							$ruta3 = "vistas/img/atenciones/i3/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
 							$origen = imagecreatefromjpeg($_FILES["fotoDiagnostico3"]["tmp_name"]);
 							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
 							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-							imagejpeg($destino, $ruta);
+							imagejpeg($destino, $ruta3);
 
 						}
 
@@ -263,11 +266,11 @@ class ControladorAtenciones{
 							=============================================*/
 
 							$aleatorio = mt_rand(100,999);
-							$ruta = "vistas/img/atenciones/i3/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+							$ruta3 = "vistas/img/atenciones/i3/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
 							$origen = imagecreatefrompng($_FILES["fotoDiagnostico3"]["tmp_name"]);
 							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
 							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-							imagepng($destino, $ruta);
+							imagepng($destino, $ruta3);
 
 						}	
 					}
@@ -277,7 +280,7 @@ class ControladorAtenciones{
 					=   VALIDAR IMAGEN ATENCION 4        =
 					=============================================*/
 
-					$ruta4 = "vistas/img/atenciones/doc/doc2.jpg";
+					$ruta4 ="";
 
 					if (isset($_FILES["fotoDiagnostico4"]["tmp_name"])){
 
@@ -305,11 +308,11 @@ class ControladorAtenciones{
 							=============================================*/
 
 							$aleatorio = mt_rand(100,999);
-							$ruta = "vistas/img/atenciones/i4/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+							$ruta4 = "vistas/img/atenciones/i4/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
 							$origen = imagecreatefromjpeg($_FILES["fotoDiagnostico4"]["tmp_name"]);
 							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
 							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-							imagejpeg($destino, $ruta);
+							imagejpeg($destino, $ruta4);
 
 						}
 
@@ -320,14 +323,15 @@ class ControladorAtenciones{
 							=============================================*/
 
 							$aleatorio = mt_rand(100,999);
-							$ruta = "vistas/img/atenciones/i4/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+							$ruta4 = "vistas/img/atenciones/i4/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
 							$origen = imagecreatefrompng($_FILES["fotoDiagnostico4"]["tmp_name"]);
 							$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
 							imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
-							imagepng($destino, $ruta);
+							imagepng($destino, $ruta4);
 
 						}	
 					}
+
 
 
 					$tabla = "atencion";

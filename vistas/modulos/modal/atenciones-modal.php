@@ -266,11 +266,6 @@
                 </tr>
               </table>
 
-                 
-              
-              <div class="form-group col-sm-2 col-xs-0">
-              </div>
-
               <!-- ENTRADA PARA SUBIR FOTO 1 -->    
               <div class="form-group col-sm-3 col-xl-3">
                 <div class="panel"></div>
@@ -284,7 +279,7 @@
                 <div class="panel"></div>
                 <input type="file" class="fotoDiagnostico2" name="fotoDiagnostico2">
                 <p class="help-block">Peso máximo de la foto 5 MB</p>
-                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="100px">
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar2" width="100px">
               </div>
 
               <!-- ENTRADA PARA SUBIR FOTO 3 -->    
@@ -292,7 +287,7 @@
                 <div class="panel"></div>
                 <input type="file" class="fotoDiagnostico3" name="fotoDiagnostico3">
                 <p class="help-block">Peso máximo de la foto 5 MB</p>
-                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="100px">
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar3" width="100px">
               </div>
 
               <!-- ENTRADA PARA SUBIR FOTO 4 -->    
@@ -300,7 +295,46 @@
                 <div class="panel"></div>
                 <input type="file" class="fotoDiagnostico4" name="fotoDiagnostico4">
                 <p class="help-block">Peso máximo de la foto 5 MB</p>
-                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar" width="100px">
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar4" width="100px">
+              </div>
+
+
+              <table class="col-sm-12 col-xs-12">
+                <tr>
+                <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:fff; font-weight: bold;"></td>
+                </tr>
+              </table>
+
+              <!-- ENTRADA PARA SUBIR FOTO 5 -->    
+              <div class="form-group col-sm-3 col-xl-3">
+                <div class="panel"></div>
+                <input type="file" class="fotoDiagnostico5" name="fotoDiagnostico5">
+                <p class="help-block">6 Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar5" width="100px">
+              </div>
+
+              <!-- ENTRADA PARA SUBIR FOTO 6 -->    
+              <div class="form-group col-sm-3 col-xl-3">
+                <div class="panel"></div>
+                <input type="file" class="fotoDiagnostico6" name="fotoDiagnostico6">
+                <p class="help-block">Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar6" width="100px">
+              </div>
+
+              <!-- ENTRADA PARA SUBIR FOTO 7 -->    
+              <div class="form-group col-sm-3 col-xl-3">
+                <div class="panel"></div>
+                <input type="file" class="fotoDiagnostico7" name="fotoDiagnostico7">
+                <p class="help-block">Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar7" width="100px">
+              </div>
+
+              <!-- ENTRADA PARA SUBIR FOTO 8 -->    
+              <div class="form-group col-sm-3 col-xl-3">
+                <div class="panel"></div>
+                <input type="file" class="fotoDiagnostico8" name="fotoDiagnostico8">
+                <p class="help-block">Peso máximo de la foto 5 MB</p>
+                <img src="vistas/img/atenciones/doc/doc3.png" class="img-thumbnail previsualizar8" width="100px">
               </div>
 
               

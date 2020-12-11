@@ -89,9 +89,9 @@ $(document).on("click", ".btnEditarAtencion2", function() {
             $("#editarFechaAtencion2").val(respuesta["fecha_atencion"]);
             $("#fotoActual2").val(respuesta["imagen_diagnostico"]);
 
-            if(respuesta["imagen_diagnostico"] != ""){
-				$(".previsualizar").attr("src", respuesta["imagen_diagnostico"]);
-			}
+            if (respuesta["imagen_diagnostico"] != "") {
+                $(".previsualizar").attr("src", respuesta["imagen_diagnostico"]);
+            }
 
 
 
@@ -310,7 +310,7 @@ $(".fotoDiagnostico").change(function() {
     =============================================*/
 
 
-    if (imagen["type"] != "image/jpeg" && imagen["type"] != "image/png" && imagen["type"] != "aplication/pdf") {
+    if (imagen["type"] != "image/jpeg" && imagen["type"] != "image/png") {
 
         $(".fotoDiagnostico").val("");
 
@@ -360,14 +360,14 @@ $(".fotoDiagnostico").change(function() {
 =============================================*/
 $(".fotoDiagnostico2").change(function() {
 
-    var imagen = this.files[0];
+    var imagen2 = this.files[0];
 
     /*=============================================
     =      SUBIENDO LA FOTO DE LA ATENCION           =
     =============================================*/
 
 
-    if (imagen["type"] != "image/jpeg" && imagen["type"] != "image/png") {
+    if (imagen2["type"] != "image/jpeg" && imagen2["type"] != "image/png") {
 
         $(".fotoDiagnostico2").val("");
 
@@ -378,7 +378,7 @@ $(".fotoDiagnostico2").change(function() {
             confirmButtonText: "¡Cerrar!"
         });
 
-    } else if (imagen["size"] > 5000000) {
+    } else if (imagen2["size"] > 5000000) {
 
 
         $(".fotoDiagnostico2").val("");
@@ -394,14 +394,14 @@ $(".fotoDiagnostico2").change(function() {
 
     } else {
 
-        var datosImagen = new FileReader;
-        datosImagen.readAsDataURL(imagen);
+        var datosImagen2 = new FileReader;
+        datosImagen2.readAsDataURL(imagen2);
 
 
-        $(datosImagen).on("load", function(event) {
+        $(datosImagen2).on("load", function(event) {
 
-            var rutaImagen = event.target.result;
-            $(".previsualizar").attr("src", rutaImagen);
+            var rutaImagen2 = event.target.result;
+            $(".previsualizar2").attr("src", rutaImagen2);
         })
 
 
@@ -458,7 +458,123 @@ $(".fotoDiagnostico3").change(function() {
         $(datosImagen).on("load", function(event) {
 
             var rutaImagen = event.target.result;
-            $(".previsualizar").attr("src", rutaImagen);
+            $(".previsualizar3").attr("src", rutaImagen);
+        })
+
+
+
+
+    }
+
+})
+
+
+
+/*=============================================
+=      SUBIENDO LA FOTO DE ATENCIÓN  4        =
+=============================================*/
+$(".fotoDiagnostico4").change(function() {
+
+    var imagen = this.files[0];
+
+    /*=============================================
+    =      SUBIENDO LA FOTO DE LA ATENCION           =
+    =============================================*/
+
+
+    if (imagen["type"] != "image/jpeg" && imagen["type"] != "image/png") {
+
+        $(".fotoDiagnostico4").val("");
+
+        swal({
+            title: "Error al subir la imagen 4",
+            text: "¡La imagen o archivo debe estar en formato JPG, PNG o PDF!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+    } else if (imagen["size"] > 5000000) {
+
+
+        $(".fotoDiagnostico4").val("");
+
+        swal({
+            title: "Error al subir la imagen 4",
+            text: "¡La imagen no debe de pesar màs de 5MB!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+
+
+    } else {
+
+        var datosImagen = new FileReader;
+        datosImagen.readAsDataURL(imagen);
+
+
+        $(datosImagen).on("load", function(event) {
+
+            var rutaImagen = event.target.result;
+            $(".previsualizar4").attr("src", rutaImagen);
+        })
+
+
+
+
+    }
+
+})
+
+
+
+/*=============================================
+=      SUBIENDO LA FOTO DE ATENCIÓN  5        =
+=============================================*/
+$(".fotoDiagnostico5").change(function() {
+
+    var imagen = this.files[0];
+
+    /*=============================================
+    =      SUBIENDO LA FOTO DE LA ATENCION           =
+    =============================================*/
+
+
+    if (imagen["type"] != "image/jpeg" && imagen["type"] != "image/png") {
+
+        $(".fotoDiagnostico5").val("");
+
+        swal({
+            title: "Error al subir la imagen 5",
+            text: "¡La imagen o archivo debe estar en formato JPG, PNG o PDF!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+    } else if (imagen["size"] > 5000000) {
+
+
+        $(".fotoDiagnostico5").val("");
+
+        swal({
+            title: "Error al subir la imagen 5",
+            text: "¡La imagen no debe de pesar màs de 5MB!",
+            type: "error",
+            confirmButtonText: "¡Cerrar!"
+        });
+
+
+
+    } else {
+
+        var datosImagen = new FileReader;
+        datosImagen.readAsDataURL(imagen);
+
+
+        $(datosImagen).on("load", function(event) {
+
+            var rutaImagen = event.target.result;
+            $(".previsualizar5").attr("src", rutaImagen);
         })
 
 
