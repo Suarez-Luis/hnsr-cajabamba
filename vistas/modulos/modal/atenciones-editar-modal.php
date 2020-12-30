@@ -97,12 +97,20 @@
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
                 <select class="form-control input-lg" name="editarServicio2" id="buscarServicio2" style="width: 100%">
                   <option value="" id="editarServicio2"></option>
-                  <option value="Medicina">MEDICINA</option>
-                  <option value="Pediatria">PEDIATRIA</option>
-                  <option value="Ginecologia">GINECOLOGÍA</option>
-                  <option value="Cirugia">CIRUGÍA</option>
-                  <option value="Odontologia General">ODONTOLOGÍA GENERAL</option>
-                  <option value="Psicologia">PSICOLOGÍA</option>
+                  <option value="">Seleccionar Servicio</option>
+                    <option value="Medicina Interna">MEDICINA INTERNA</option>
+                    <option value="Medicina General">MEDICINA GENERAL</option>
+                    <option value="Gastroenterologia">GASTROENTEROLOGIA</option>
+                    <option value="Pediatria">PEDIATRIA GENERAL</option>
+                    <option value="Ginecologia">GINECOLOGIA</option>
+                    <option value="Ecografia">ECOGRAFIA</option>
+                    <option value="Rayos X">RAYOS X</option>
+                    <option value="Laboratorio">LABORATORIO</option>
+                    <option value="Cirugia General">CIRUGIA GENERAL</option>
+                    <option value="Odontologia General">ODONTOLOGIA GENERAL</option>
+                    <option value="Psicologia">PSICOLOGIA</option>
+                    <option value="Cred">CRECIMIENTO Y DESARROLLO (CRED)</option>
+                    <option value="Obstetricia">OBSTETRICIA (MATERNO, PLANIFICACIÓN FAMILIAR, ETS-VIH)</option>
                 </select>
               </div>
             </div>

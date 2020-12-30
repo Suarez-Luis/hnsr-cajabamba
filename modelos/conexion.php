@@ -6,7 +6,7 @@
 
 			$link = new PDO("mysql:host=localhost;dbname=hnsr",
 							"hnsr",
-							"hnsr2020c");
+							"hnsr2020");
 
 			$link -> exec("set names utf8");
 

@@ -29,26 +29,26 @@
 
               <table class="col-sm-12">
                 <tr>
-                  <td style="border: 1px solid #666; width:640px; text-align:center; background-color:#A4A4A4; font-weight: bold;">DEL ASEGURADO / USUARIO</td>
+                  <td style="border: 2px solid #fff; width:640px; text-align:center; background-color:#5898CC; color:#fff;">DEL ASEGURADO / USUARIO</td>
                 </tr>
               </table>
 
               <table class="col-sm-6 col-xs-6">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">N° DE DNI</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center;  background-color:#5898CC; color:#fff;">N° DE DNI</td>
                 </tr>
               </table>
 
               <table class="col-sm-6 col-xs-6">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">FECHA DE NACIMIENTO</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center;  background-color:#5898CC; color:#fff;">FECHA DE NACIMIENTO</td>
                 </tr>
               </table>
 
               <!-- ENTRADA DEL DOCUMENTO -->
               <div class="form-group col-sm-6 col-xs-6">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-address-card"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-address-card fa-2x" style="color:#FF3A0F;"></i></span>
                   <input type="number" class="form-control input-lg" name="nuevoDoc" placeholder="Ingresar Nº DNI" required>
                 </div>
               </div>
@@ -56,27 +56,27 @@
               <!-- ENTRADA DE FECHA DE NACIMIENTO -->
               <div class="form-group col-sm-6 col-xs-6">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-calendar fa-2x" style="color:#FF3A0F;"></i></span>
                   <input type="date" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar Fecha de Nacimiento" >
                 </div>
               </div>
 
               <table class="col-sm-6 col-xs-6">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">APELLIDO PATERNO</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center;  background-color:#5898CC; color:#fff;">APELLIDO PATERNO</td>
                 </tr>
               </table>
 
               <table class="col-sm-6 col-xs-6">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">APELLIDO MATERNO</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center;  background-color:#5898CC; color:#fff;">APELLIDO MATERNO</td>
                 </tr>
               </table>
 
               <!-- ENTRADA DEL APELLIDO PATERNO -->
               <div class="form-group col-sm-6 col-xs-6">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-user-circle fa-2x" style="color:#FF3A0F;"></i></span>
                   <input type="text" class="form-control input-lg" name="nuevoApellido1" placeholder="Ingresar Apellido Paterno" required>
                 </div>
               </div>
@@ -84,27 +84,27 @@
               <!-- ENTRADA DEL APELLIDO MATERNO -->
               <div class="form-group col-sm-6 col-xs-6">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-user-circle fa-2x" style="color:#FF3A0F;"></i></span>
                   <input type="text" class="form-control input-lg" name="nuevoApellido2" placeholder="Ingresar Apellido Materno" required>
                 </div>
               </div>
 
               <table class="col-sm-6 col-xs-6">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">PRIMER NOMBRE</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center;  background-color:#5898CC; color:#fff;">PRIMER NOMBRE</td>
                 </tr>
               </table>
 
               <table class="col-sm-6 col-xs-6">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">SEGUNDO NOMBRE</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center;  background-color:#5898CC; color:#fff;">SEGUNDO NOMBRE</td>
                 </tr>
               </table>
 
               <!-- ENTRADA DEL NOMBRE 1 -->
               <div class="form-group col-sm-6 col-xs-6">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-user-circle fa-2x" style="color:#FF3A0F;"></i></span>
                   <input type="text" class="form-control input-lg" name="nuevoNombre1" placeholder="Ingresar 1er nombre" required>
                 </div>
               </div>
@@ -112,35 +112,35 @@
               <!-- ENTRADA DEL NOMBRE 2 -->
               <div class="form-group col-sm-6 col-xs-6">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-user-plus fa-2x" style="color:#FF3A0F;"></i></span>
                   <input type="text" class="form-control input-lg" name="nuevoNombre2" placeholder="Ingresar 2do nombre" >
                 </div>
               </div>
 
               <table class="col-sm-12 col-xs-12">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">OTROS NOMBRES</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center; background-color:#5898CC; color:#fff;">OTROS NOMBRES</td>
                 </tr>
               </table>
 
               <!-- ENTRADA DEL NOMBRE 3 -->
               <div class="form-group col-sm-12 col-xs-12">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-user-plus fa-2x" style="color:#FF3A0F;" aria-hidden="true"></i></span>
                   <input type="text" class="form-control input-lg" name="nuevoNombre3" placeholder="Ingresar 3er nombre" >
                 </div>
               </div>
 
               <table class="col-sm-12 col-xs-12">
                 <tr>
-                  <td style="border: 1px solid #666; width:50px; text-align:center;  background-color:#BDBDBD; font-weight: bold;">CELULAR</td>
+                  <td style="border: 2px solid #fff; width:50px; text-align:center; background-color:#5898CC; color:#fff;">CELULAR</td>
                 </tr>
               </table>
 
               <!-- ENTRADA DEL TELEFONO -->
               <div class="form-group col-sm-12 col-xs-12">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-phone fa-2x" style="color:#FF3A0F;"></i></span>
                   <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar #Telefono">
                 </div>
               </div>
